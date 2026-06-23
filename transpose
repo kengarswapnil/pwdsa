@@ -1,0 +1,19 @@
+class Solution {
+    public int[][] transpose(int[][] matrix) {
+        int n = matrix.length;        // Number of rows in original matrix
+        int m = matrix[0].length;     // Number of columns in original matrix
+
+        // New matrix dimensions must be swapped: m rows by n columns
+        int[][] res = new int[m][n];
+
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                // Key step: Row j and column i from the original matrix 
+                // becomes row i and column j in the result matrix
+                res[i][j] = matrix[j][i];
+            }
+        }
+
+        return res; 
+    }
+}
