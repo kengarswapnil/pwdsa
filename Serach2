@@ -1,0 +1,39 @@
+
+class Main {
+    public static void main(String[] args) {
+        String s  = "swapnil";
+        char target = 's';
+        System.out.println(SerachChar(s,target));
+        System.out.println(Serach2(s,target));
+    }
+    
+    public static boolean Serach2(String s ,char target){
+        
+        if(s.length() == 0){
+            return false;
+        }
+        
+        
+        for(char ch :s.toCharArray()){
+            if(ch == target){
+                return true;
+            }
+        }
+        
+        return false;
+    }
+    
+    public static boolean SerachChar(String s ,char target){
+        if(s.length() == 0){
+            return false;
+        }
+        
+        for(int i=0;i<s.length();i++){
+            if(target == s.charAt(i)){
+                return true ;
+            }
+        }
+        
+        return false;
+    }
+}
