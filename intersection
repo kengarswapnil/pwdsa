@@ -1,0 +1,33 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        int arr1 [] = {1,2,3,4};
+        int arr2 [] = {2,3};
+        System.out.print(Arrays.toString(intersection(arr1,arr2)));
+       
+    }
+    
+    public static int[] intersection(int arr1 [] ,int arr2[]){
+        int n  =  arr1.length;
+        int n2 =  arr2.length;
+        
+        int temp [] =  new int[n];
+        int k = 0;
+        
+        for(int i = 0 ; i < n ; i++){
+            for(int j = 0 ; j < n2 ; j++){
+                if(arr1[i] == arr2[j]){
+                    temp[k++] =  arr1[i];
+                    break;
+                }
+            }
+        }
+        
+         int result[] = new int[k];
+        for(int i = 0; i < k; i++){
+            result[i] = temp[i];
+        }
+        
+        return result;
+    }
+}
